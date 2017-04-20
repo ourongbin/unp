@@ -2,6 +2,8 @@
 #define UNP_INCLUDE_UNPBASE_H
 
 #include <stdio.h>
+#include <signal.h>
+#include <sys/wait.h>
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
@@ -9,6 +11,6 @@
 
 #include "error.h"
 
-#define MAXLINE 1024
+#define MAXLINE 8
 
 #endif
