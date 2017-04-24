@@ -8,9 +8,10 @@
 #include <errno.h>
 #include <string.h>
 #include <unistd.h>
+#include <pthread.h>
 
 #include "error.h"
 
-#define MAXLINE 8
+#define MAXLINE 1024
 
 #endif

@@ -17,7 +17,7 @@ SRCS = $(wildcard src/*.c)
 OBJS = $(patsubst src/%.c, obj/%.o, $(SRCS))
 
 CC=gcc
-CFLAGS=-Wall -I inc/
+CFLAGS=-Wall -I inc/ -lpthread
 
 all: $(BINS)
 
