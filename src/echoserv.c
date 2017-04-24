@@ -9,11 +9,12 @@ void * doit(void *arg) {
     char buff[MAXLINE];
     int  n;
     for (;;) {
-        n = readline(fd, buff, MAXLINE);
-        if (n <= 0) {
+        n = read(fd, buff, MAXLINE);
+        if (n < 0 && errno == EINTR) {
+            continue;
+        } else if (n <= 0) {
             break;
-        }
-
+        } 
         //printf("Recvd %s", buff);
 
         if (writen(fd, buff, strlen(buff)) < strlen(buff)) {
