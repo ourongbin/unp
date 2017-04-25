@@ -9,6 +9,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <pthread.h>
+#include <sys/epoll.h>
 
 #include "error.h"
 
